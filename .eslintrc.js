@@ -32,5 +32,8 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-undef': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-key': 'off',
+    checkFragmentShorthand: 'off',
   },
 };
