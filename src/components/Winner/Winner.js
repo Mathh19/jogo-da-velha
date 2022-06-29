@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../contexts/GameContext';
+import { WinnerP } from './Styled';
 
-export default function Board() {
-  const context = useContext(GameContext);
+export default function Winner() {
+  const { whoIsWinner } = useContext(GameContext);
 
-  return <h1>Board</h1>;
+  if (!whoIsWinner) return <></>;
+  return <WinnerP>{whoIsWinner} ganhou!!</WinnerP>;
 }

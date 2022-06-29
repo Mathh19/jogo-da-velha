@@ -1,20 +1,21 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../contexts/GameContext';
-import { ResetBtn, ResetP } from './styled';
+import { ResetP } from './Styled';
 
 export default function Reset() {
-  const { setSquares, setIsXNext } = useContext(GameContext);
+  const { setSquares, setIsXNext, setWhoIsWinner } = useContext(GameContext);
 
   function handleClick() {
     setSquares(Array(9).fill(null));
     setIsXNext(true);
+    setWhoIsWinner('');
   }
 
   return (
     <ResetP>
-      <ResetBtn type="button" onClick={handleClick}>
+      <button type="button" onClick={handleClick}>
         Reset
-      </ResetBtn>
+      </button>
     </ResetP>
   );
 }
