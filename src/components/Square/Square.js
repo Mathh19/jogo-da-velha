@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../contexts/GameContext';
 import { Button } from './Styled';
+import t from 'prop-types';
 
 export default function Square({ value, index }) {
   const {
@@ -38,3 +39,12 @@ export default function Square({ value, index }) {
     </Button>
   );
 }
+
+Square.defaultProps = {
+  value: null,
+};
+
+Square.propTypes = {
+  value: t.string,
+  index: t.number.isRequired,
+};
