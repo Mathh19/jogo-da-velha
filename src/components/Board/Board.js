@@ -8,18 +8,22 @@ import Player from '../Player/Player';
 import Reset from '../Reset/Reset';
 import Winner from '../Winner/Winner';
 import History from '../History/History';
+
 import Square from '../Square/Square';
 import { BoardContainer } from './Styled';
 
 export default function Board() {
-  const { squares, setWhoIsWinner, history } = useContext(GameContext);
+  const {
+    state: { squares, history },
+    dispatch,
+  } = useContext(GameContext);
 
   useEffect(() => {
     const winner = calculateWinner(squares);
     if (winner) {
-      setWhoIsWinner(winner);
+      dispatch({ type: 'ADD_WINNER', payload: winner });
     }
-  }, [squares, setWhoIsWinner, history]);
+  }, [dispatch, squares, history]);
 
   return (
     <BoardContainer>

@@ -6,7 +6,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10vw;
+  font-size: 5vw;
   background: none;
   border: 1.5px solid #ccc;
   cursor: pointer;
