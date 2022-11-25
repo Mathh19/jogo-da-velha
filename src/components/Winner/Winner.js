@@ -4,9 +4,11 @@ import { WinnerP } from './Styled';
 
 export default function Winner() {
   const {
-    state: { whoIsWinner },
+    state: { whoIsWinner, history },
   } = useContext(GameContext);
+  console.log(history.length);
 
+  if (!whoIsWinner && history.length === 9) return <WinnerP>Empate!!</WinnerP>;
   if (!whoIsWinner) return <></>;
   return <WinnerP>{whoIsWinner} ganhou!!</WinnerP>;
 }
