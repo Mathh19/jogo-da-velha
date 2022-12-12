@@ -6,7 +6,6 @@ export default function Winner() {
   const {
     state: { whoIsWinner, history },
   } = useContext(GameContext);
-  console.log(history.length);
 
   if (!whoIsWinner && history.length === 9) return <WinnerP>Empate!!</WinnerP>;
   if (!whoIsWinner) return <></>;

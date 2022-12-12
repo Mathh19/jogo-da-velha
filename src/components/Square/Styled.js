@@ -11,12 +11,13 @@ export const Button = styled.button`
   font-size: 5vw;
   font-family: 'Splash', cursive;
   background: none;
-  border: 1.5px solid #ccc;
+  border: none;
+  /* border: 1.5px solid #ccc; */
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     border-color: red;
     transition: ease-in-out 300ms;
-  }
+  } */
   &::after {
     content: '';
     display: block;
