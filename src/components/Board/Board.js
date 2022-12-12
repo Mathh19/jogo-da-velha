@@ -10,7 +10,7 @@ import Winner from '../Winner/Winner';
 import History from '../History/History';
 
 import Square from '../Square/Square';
-import { BoardContainer } from './Styled';
+import { BoardContainer } from './Styled.js';
 
 export default function Board() {
   const {

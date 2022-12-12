@@ -7,7 +7,7 @@ export const BoardContainer = styled.div`
 
   .Board {
     background-size: cover;
-    background-image: url('https://res.cloudinary.com/ddiiakz1t/image/upload/v1670841996/jogo-da-velha-removebg-preview_ka6val.png');
+    background-image: url('https://res.cloudinary.com/ddiiakz1t/image/upload/co_rgb:ffffff,q_100/v1670841996/jogo-da-velha-removebg-preview_ka6val.webp');
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
