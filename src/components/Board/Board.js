@@ -10,7 +10,7 @@ import Winner from '../Winner/Winner';
 import History from '../History/History';
 
 import Square from '../Square/Square';
-import { BoardContainer } from './Styled.js';
+import * as Styled from './Styled';
 
 export default function Board() {
   const {
@@ -26,7 +26,7 @@ export default function Board() {
   }, [dispatch, squares, history]);
 
   return (
-    <BoardContainer>
+    <Styled.BoardContainer>
       <Player />
       <Winner />
       <Reset />
@@ -37,6 +37,6 @@ export default function Board() {
       </div>
 
       <History />
-    </BoardContainer>
+    </Styled.BoardContainer>
   );
 }
